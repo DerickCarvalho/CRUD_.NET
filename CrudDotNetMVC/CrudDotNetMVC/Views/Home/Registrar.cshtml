@@ -1,0 +1,84 @@
+﻿@model UsuariosModel
+@{
+    ViewData["Title"] = "Registrar";
+}
+
+<div class="flex-column-center">
+    <h1>Registrar-se</h1>
+
+    <form id="registro-form" class="inputs width-100 flex-column-center" asp-controller="Home" asp-action="AddUsuario">
+        <div class="inputs width-50 flex-column-left">
+            <label>Nome</label>
+            <input asp-for="Nome" class="form-input" type="text" placeholder="Digite seu nome" required/>
+        </div>
+
+        <div class="inputs width-50 flex-column-left">
+            <label>Usuário</label>
+            <input asp-for="Usuario" class="form-input" type="text" placeholder="Digite seu nome de usuário" required />
+        </div>
+
+        <div class="inputs width-50 flex-column-left">
+            <label>Senha</label>
+            <div class="fake-input flex-row-center">
+                <input id="pass-input" class="width-100" type="password" placeholder="Digite sua senha" required />
+                <img id="pass-button" class="pass-button" src="~/imgs/eye.png" alt="Imagem do botão de mostrar e ocultar a senha" />
+            </div>
+        </div>
+
+        <div class="inputs width-50 flex-column-left">
+            <label>Confirmar Senha</label>
+            <div class="fake-input flex-row-center">
+                <input id="conf-pass-input" class="width-100" type="password" placeholder="Digite sua senha" required />
+                <input id="pass-hidden" asp-for="Senha" type="hidden"/>
+                <img id="conf-pass-button" class="pass-button" src="~/imgs/eye.png" alt="Imagem do botão de mostrar e ocultar a senha" />
+            </div>
+        </div>
+
+        <div style="display: none;" id="pass-error" class="error-message flex-row-center">
+            <p>As senhas não coincidem!</p>
+        </div>
+
+        @if (!string.IsNullOrEmpty(ViewData["ExistUser"] as string)) 
+        {
+            <div class="error-message flex-row-center">
+                <p>As informações digitadas pertencem a um usuário já cadastrado!</p>
+            </div>
+        }
+
+        <button class="form-submit btn btn-primary">Cadastrar</button>
+    </form>
+    <p>Já possui uma conta? <a asp-controller="Home" asp-action="Index">Logar-se</a></p>
+</div>
+
+<script>
+
+    // Criptografia simples (usando método Hash):
+    function hashPassword(password) {
+        let hash = 0;
+
+        for (let i = 0; i < password.length; i++) {
+            const char = password.charCodeAt(i);
+            hash = (hash << 5) - hash + char;
+        }
+
+        return hash.toString();
+    }
+            
+    var passError = document.getElementById('pass-error')
+
+    var senha = document.getElementById('pass-input');
+    var confSenha = document.getElementById('conf-pass-input');
+    var passHiddem = document.getElementById('pass-hidden');
+    var regForm = document.getElementById('registro-form');
+
+    regForm.addEventListener('submit', (event) => {
+        if (senha.value != confSenha.value) {
+            passError.style.display = "flex";
+            event.preventDefault();
+        } else {
+            var noCriptsenha = document.getElementById('pass-input').value;
+            const criptPass = hashPassword(noCriptsenha);
+            passHiddem.value = criptPass;
+        }
+    });
+</script>

@@ -1,0 +1,186 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --default-font: 'Oswald', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+}
+
+/* -----====[ CLASSES DE USO GERAL ]====----- */
+
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.space {
+    padding: 20px;
+}
+
+.horizontal-space {
+    padding: 0 20px;
+}
+
+.vertical-space {
+    padding: 20px 0;
+}
+
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-row-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex-row-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-row-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* -----====[ /CLASSES DE USO GERAL ]====----- */
+
+/* -----====[ CABEÇALHO ]====----- */
+
+header {
+    background-color: #009fd9;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    width: 150px;
+    transition: linear transform 0.1s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* -----====[ /CABEÇALHO ]====----- */
+
+
+/* -----====[ CONTEÚDO ]====----- */
+
+.inputs {
+    margin: 5px 0;
+}
+
+.form-input {
+    width: 100%;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.fake-input {
+    width: 100%;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.fake-input input {
+    border: 0;
+    outline: 0;
+}
+
+.pass-button {
+    background-color: #FFFFFF;
+    border: 0;
+    border-left: 1px solid #808080;
+    padding-left: 10px;
+    width: 35px;
+    transition: linear transform 0.1s;
+}
+
+.pass-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.form-submit {
+    margin-top: 30px;
+}
+
+.error-message {
+    background-color: #ff2b2b;
+    margin: 10px 0;
+    padding: 10px;
+    border: 5px solid #cc0000;
+    border-radius: 10px;
+}
+
+.error-message p {
+    margin: 0;
+}
+
+/* -----====[ /CONTEÚDO ]====----- */
+
+/* -----====[ RODAPÉ ]====----- */
+
+footer {
+    background-color: #009fd9;
+}
+
+footer p {
+    margin: 0;
+}
+
+.profile-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: linear transform 0.1s;
+}
+
+.profile-link:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.profile-link img{
+    width: 40px;
+    margin: 10px;
+}
+
+/* -----====[ /RODAPÉ ]====----- */
