@@ -1,14 +1,19 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@model List<TasksModel>
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CrudDotNetMVC</title>
+    <meta name="description" content="Sistema simples de ToDoList para listas de afazeres gerais.">
+    <title>MyList - Home</title>
+    <link rel="icon" href="~/imgs/icon.png"/>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/HomePage.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CrudDotNetMVC.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <!--
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -30,15 +35,34 @@
             </div>
         </nav>
     </header>
+    -->
+
+    @if (Model != null && Model.Any())
+    {
+        <header class="flex-row-space-between space">
+            <a class="logo" asp-controller="Home" asp-action="Index"><img src="~/imgs/logo.png" alt="Imagem da logo do site"/></a>
+            <a class="profile"><img src="./imgs/profile.png"/></a>
+        </header>
+    } 
+    else {
+        <header class="flex-row-space-between space">
+            <a class="logo" asp-controller="Home" asp-action="Index"><img src="~/imgs/logo.png" alt="Imagem da Logo do Site"/></a>
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Index">LogIn</a>
+        </header>
+    }
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - CrudDotNetMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer flex-row-space-between space">
+        <p>&copy;2023.2 - MyList</p>
+
+        <div class="flex-row-center">
+            <p>&copy;2023.2 - Developed By Derick Carvalho</p>
+            <a class="profile-link" href="https://github.com/DerickCarvalho"><img src="~/imgs/git.png" alt="Imagem da logo do GitHub" /></a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

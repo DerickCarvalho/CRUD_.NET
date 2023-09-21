@@ -2,7 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="flex-column-center">
+    <h1>LogIn</h1>
+
+    <form class="inputs width-100 flex-column-center">
+        <div class="width-50 flex-column-left">
+            <label>Usuário</label>
+            <input class="form-input" type="text" placeholder="Digite seu nome de usuário" />
+        </div>
+
+        <div class="inputs width-50 flex-column-left">
+            <label>Senha</label>
+            <div class="fake-input flex-row-center">
+                <input id="pass-input" class="width-100" type="password" placeholder="Digite sua senha" />
+                <img id="pass-button" class="pass-button" src="~/imgs/eye.png" alt="Imagem do botão de mostrar e ocultar a senha"/>
+            </div>
+        </div>
+
+        <button class="form-submit btn btn-primary">Entrar</button>
+    </form>
+
+    <p>Não possui uma conta? <a asp-controller="Home" asp-action="Registrar">Cadastrar-se</a></p>
 </div>

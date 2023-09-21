@@ -1,3 +1,7 @@
+using CrudDotNetMVC.Data;
+using CrudDotNetMVC.Repositorio;
+using Microsoft.EntityFrameworkCore;
+
 namespace CrudDotNetMVC
 {
     public class Program
@@ -5,6 +9,11 @@ namespace CrudDotNetMVC
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Configure DataBase.
+            var connectionString = builder.Configuration.GetConnectionString("DataBase");
+            builder.Services.AddDbContext<BancoContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+            builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
