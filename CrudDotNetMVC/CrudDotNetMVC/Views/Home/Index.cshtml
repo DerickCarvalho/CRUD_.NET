@@ -19,6 +19,13 @@
             </div>
         </div>
 
+        @if (!string.IsNullOrEmpty(TempData["CadastroSucesso"] as string))
+        {
+            <div class="success-message flex-row-center">
+                <p>@TempData["CadastroSucesso"]</p>
+            </div>
+        }
+
         <button class="form-submit btn btn-primary">Entrar</button>
     </form>
 

@@ -38,10 +38,10 @@
             <p>As senhas não coincidem!</p>
         </div>
 
-        @if (!string.IsNullOrEmpty(ViewData["ExistUser"] as string)) 
+        @if (!string.IsNullOrEmpty(TempData["ExistUsuario"] as string))
         {
             <div class="error-message flex-row-center">
-                <p>As informações digitadas pertencem a um usuário já cadastrado!</p>
+                <p>@TempData["ExistUsuario"]</p>
             </div>
         }
 

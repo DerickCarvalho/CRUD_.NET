@@ -11,7 +11,10 @@ namespace CrudDotNetMVC.Repositorio
         {
             _bancoContext = bancoContext;
         }
-
+        public UsuariosModel ValidarUsuario(string usuario)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(x => x.Usuario == usuario);
+        }
         public UsuariosModel AddUsuario(UsuariosModel usuario)
         {
             _bancoContext.Usuarios.Add(usuario);

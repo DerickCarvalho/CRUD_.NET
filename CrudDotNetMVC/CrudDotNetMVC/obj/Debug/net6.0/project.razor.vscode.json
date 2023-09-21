@@ -23719,6 +23719,11 @@
       "FilePath": "c:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\Views\\Home\\Registrar.cshtml",
       "TargetPath": "Views\\Home\\Registrar.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\Views\\Tasks\\Index.cshtml",
+      "TargetPath": "Views\\Tasks\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }

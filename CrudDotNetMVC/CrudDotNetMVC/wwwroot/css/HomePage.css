@@ -155,6 +155,18 @@ header {
     margin: 0;
 }
 
+.success-message {
+    background-color: #7cff75;
+    margin: 10px 0;
+    padding: 10px;
+    border: 5px solid #078200;
+    border-radius: 10px;
+}
+
+.success-message p {
+    margin: 0;
+}
+
 /* -----====[ /CONTEÚDO ]====----- */
 
 /* -----====[ RODAPÉ ]====----- */

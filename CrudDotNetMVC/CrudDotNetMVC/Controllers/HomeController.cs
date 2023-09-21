@@ -25,8 +25,18 @@ namespace CrudDotNetMVC.Controllers
         [HttpPost]
         public IActionResult AddUsuario(UsuariosModel newUsuario)
         {
-            _usuarioRepositorio.AddUsuario(newUsuario);
-            return RedirectToAction("Index");
+            UsuariosModel usuarioDB = _usuarioRepositorio.ValidarUsuario(newUsuario.Usuario);
+
+            if (usuarioDB != null)
+            {
+                TempData["ExistUsuario"] = "Usuário Já Cadastrado no Sistema!";
+                return RedirectToAction("Registrar");
+            } 
+            else {
+                _usuarioRepositorio.AddUsuario(newUsuario);
+                TempData["CadastroSucesso"] = "Cadastro realizado com sucesso!";
+                return RedirectToAction("Index");
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
