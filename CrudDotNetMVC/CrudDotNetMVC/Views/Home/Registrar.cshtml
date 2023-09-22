@@ -10,6 +10,7 @@
         <div class="inputs width-50 flex-column-left">
             <label>Nome</label>
             <input asp-for="Nome" class="form-input" type="text" placeholder="Digite seu nome" required/>
+            <input asp-for="UrlImg" type="hidden" value="~/imgs/profile.png" />
         </div>
 
         <div class="inputs width-50 flex-column-left">
@@ -47,7 +48,7 @@
 
         <button class="form-submit btn btn-primary">Cadastrar</button>
     </form>
-    <p>Já possui uma conta? <a asp-controller="Home" asp-action="Index">Logar-se</a></p>
+    <p>Já possui uma conta? <a asp-controller="Usuario" asp-action="Login">Logar-se</a></p>
 </div>
 
 <script>

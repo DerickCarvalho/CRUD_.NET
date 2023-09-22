@@ -1,0 +1,20 @@
+﻿@{
+    int usuId = 0;
+    if (ViewData["Id"] != null)
+    {
+        int.TryParse(ViewData["Id"].ToString(), out usuId);
+    }
+
+    string urlImage;
+    if (ViewData["UrlImg"] != null)
+    {
+        urlImage = ViewData["UrlImg"].ToString();
+    }
+}
+
+<header class="flex-row-space-between space">
+    <a class="logo"><img src="~/imgs/logo.png" alt="Imagem da logo do site" /></a>
+    <a role="button" asp-controller="Home" asp-action="Perfil" class="flex-row-center profile"><p>@ViewData["Usuario"]</p><img src="@ViewData["UrlImg"]" /></a>
+</header>
+
+<h1>TELA DE USUARIO @usuId</h1>

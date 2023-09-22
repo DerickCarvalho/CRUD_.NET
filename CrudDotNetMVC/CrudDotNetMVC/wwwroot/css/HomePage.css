@@ -92,9 +92,27 @@ header {
 }
 
 .logo img:hover {
+    cursor: pointer;
     transform: scale(1.05);
 }
-
+.profile {
+    text-decoration: none;
+    transition: linear transform 0.1s;
+}
+.profile:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.profile p {    
+    color: #000000;
+    font-size: 20px;
+    margin: 0 10px;
+}
+.profile img {
+    width: 65px;
+    border: 5px solid #000000;
+    border-radius: 200px;
+}
 /* -----====[ /CABEÇALHO ]====----- */
 
 

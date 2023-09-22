@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace CrudDotNetMVC.Controllers
 {
     public class HomeController : Controller
-    {   
+    {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
         public HomeController(IUsuarioRepositorio usuarioRepositorio)
         {
@@ -20,6 +20,33 @@ namespace CrudDotNetMVC.Controllers
         public IActionResult Registrar()
         {
             return View();
+        }
+        public IActionResult Perfil()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult TasksList(UsuariosModel logarUsuario)
+        {
+            UsuariosModel logUser = _usuarioRepositorio.Login(
+            logarUsuario.Usuario, logarUsuario.Senha);
+
+
+
+            if (logUser != null)
+            {
+                ViewData["Id"] = logUser.Id;
+                ViewData["Usuario"] = logUser.Usuario;
+                ViewData["Nome"] = logUser.Nome;
+                ViewData["UrlImg"] = logUser.UrlImg;
+                return View();
+            }
+            else
+            {
+                TempData["NaoEncontrado"] = "Usuário não encontrado!";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]

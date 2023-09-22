@@ -11,6 +11,10 @@ namespace CrudDotNetMVC.Repositorio
         {
             _bancoContext = bancoContext;
         }
+        public UsuariosModel BuscarUsuario(int id)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(x => x.Id == id);
+        }
         public UsuariosModel ValidarUsuario(string usuario)
         {
             return _bancoContext.Usuarios.FirstOrDefault(x => x.Usuario == usuario);
@@ -20,6 +24,10 @@ namespace CrudDotNetMVC.Repositorio
             _bancoContext.Usuarios.Add(usuario);
             _bancoContext.SaveChanges();
             return usuario;
+        }
+        public UsuariosModel Login(string usuario, string senha)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(y => y.Usuario == usuario && y.Senha == senha);
         }
     }
 }

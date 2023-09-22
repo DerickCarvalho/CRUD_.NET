@@ -1,20 +1,27 @@
-﻿@{
+﻿@model UsuariosModel
+@{
     ViewData["Title"] = "Home Page";
 }
+
+<header class="flex-row-space-between space width-100">
+    <a class="logo" asp-controller="Home" asp-action="Index"><img src="~/imgs/logo.png" alt="Imagem da Logo do Site" /></a>
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">LogIn</a>
+</header>
 
 <div class="flex-column-center">
     <h1>LogIn</h1>
 
-    <form class="inputs width-100 flex-column-center">
+    <form id="registro-form" class="inputs width-100 flex-column-center" asp-controller="Home" asp-action="TasksList">
         <div class="width-50 flex-column-left">
             <label>Usuário</label>
-            <input class="form-input" type="text" placeholder="Digite seu nome de usuário" />
+            <input asp-for="Usuario" class="form-input" type="text" placeholder="Digite seu nome de usuário" />
         </div>
 
         <div class="inputs width-50 flex-column-left">
             <label>Senha</label>
             <div class="fake-input flex-row-center">
                 <input id="pass-input" class="width-100" type="password" placeholder="Digite sua senha" />
+                <input id="pass-hidden" asp-for="Senha" type="hidden" />
                 <img id="pass-button" class="pass-button" src="~/imgs/eye.png" alt="Imagem do botão de mostrar e ocultar a senha"/>
             </div>
         </div>
@@ -26,8 +33,41 @@
             </div>
         }
 
+        @if (!string.IsNullOrEmpty(TempData["NaoEncontrado"] as string))
+        {
+            <div class="error-message flex-row-center">
+                <p>@TempData["NaoEncontrado"]</p>
+            </div>
+        }
+
         <button class="form-submit btn btn-primary">Entrar</button>
     </form>
 
     <p>Não possui uma conta? <a asp-controller="Home" asp-action="Registrar">Cadastrar-se</a></p>
 </div>
+
+<script>
+
+    // Criptografia simples (usando método Hash):
+    function hashPassword(password) {
+        let hash = 0;
+
+        for (let i = 0; i < password.length; i++) {
+            const char = password.charCodeAt(i);
+            hash = (hash << 5) - hash + char;
+        }
+
+        return hash.toString();
+    }
+
+    var passError = document.getElementById('pass-error')
+
+    var regForm = document.getElementById('registro-form');
+    var passHiddem = document.getElementById('pass-hidden');
+
+    regForm.addEventListener('submit', (event) => {
+        var noCriptsenha = document.getElementById('pass-input').value;
+        const criptPass = hashPassword(noCriptsenha);
+        passHiddem.value = criptPass;
+    });
+</script>
