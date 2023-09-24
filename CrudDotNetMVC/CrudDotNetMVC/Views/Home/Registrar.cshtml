@@ -3,6 +3,11 @@
     ViewData["Title"] = "Registrar";
 }
 
+<header class="flex-row-space-between space width-100">
+    <a class="logo" asp-controller="Home" asp-action="Index"><img src="~/imgs/logo.png" alt="Imagem da Logo do Site" /></a>
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">LogIn</a>
+</header>
+
 <div class="flex-column-center">
     <h1>Registrar-se</h1>
 
@@ -10,7 +15,7 @@
         <div class="inputs width-50 flex-column-left">
             <label>Nome</label>
             <input asp-for="Nome" class="form-input" type="text" placeholder="Digite seu nome" required/>
-            <input asp-for="UrlImg" type="hidden" value="~/imgs/profile.png" />
+            <input asp-for="UrlImg" type="hidden" value="https://www.freeiconspng.com/thumbs/profile-icon-png/am-a-19-year-old-multimedia-artist-student-from-manila--21.png" />
         </div>
 
         <div class="inputs width-50 flex-column-left">
@@ -48,7 +53,7 @@
 
         <button class="form-submit btn btn-primary">Cadastrar</button>
     </form>
-    <p>Já possui uma conta? <a asp-controller="Usuario" asp-action="Login">Logar-se</a></p>
+    <p>Já possui uma conta? <a asp-controller="Home" asp-action="Index">Logar-se</a></p>
 </div>
 
 <script>

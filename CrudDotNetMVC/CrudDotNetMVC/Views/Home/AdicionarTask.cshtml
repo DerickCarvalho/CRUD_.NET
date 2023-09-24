@@ -1,0 +1,61 @@
+﻿@model TasksModel
+@{
+    int usuId = 0;
+    if (ViewData["Id"] != null)
+    {
+        int.TryParse(ViewData["Id"].ToString(), out usuId);
+    }
+}
+
+<header class="flex-row-space-between space">
+    <a class="logo">
+        <img role="button" id="backPage" src="~/imgs/logo.png" alt="Imagem da logo do site" />
+    </a>
+    <a role="button" asp-controller="Home" asp-action="Perfil" asp-route-id="@usuId" class="flex-row-center profile">
+        <p>@ViewData["Usuario"]</p><img src="@ViewData["UrlImg"]" />
+    </a>
+</header>
+
+<div class="flex-column-center">
+    <div style="padding-bottom: 50px;" class="flex-row-center width-50">
+        <h1>Adicionar nova Tarefa</h1>
+    </div>
+
+    <form class="flex-column-center width-100" asp-controller="Home" asp-action="NovaTask">
+        <div class="inputs width-50 flex-column-left">
+            <label>Título</label>
+            <input class="form-input" asp-for="Titulo" type="Text" placeholder="Título" maxlength="30" required/>
+            <input asp-for="Status" type="hidden" value="0" />
+        </div>
+
+        <div class="inputs width-50 flex-column-left">
+            <label>Descrição</label>
+            <textarea class="form-input" asp-for="Descricao" placeholder="Descrição da tarefa" maxlength="300" required></textarea>
+            <input asp-for="UsuId" type="hidden" value="@ViewData["Id"]" />
+        </div>
+
+        @if (!string.IsNullOrEmpty(TempData["ErroAdd"] as string))
+        {
+            <div class="success-message flex-row-center">
+                <p>@TempData["ErroAdd"]</p>
+            </div>
+        }
+
+        <div class="flex-row-space-around">
+            <button class="form-submit btn btn-primary">Adicionar</button>
+            <a role="button" id="return" class="form-submit btn btn-danger">Voltar</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    var backPage = document.getElementById('backPage');
+
+    backPage.addEventListener('click', () => {
+        window.history.back();
+    });
+
+    document.getElementById('return').addEventListener('click', () => {
+        window.history.back();
+    });
+</script>

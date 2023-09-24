@@ -113,6 +113,16 @@ header {
     border: 5px solid #000000;
     border-radius: 200px;
 }
+
+.userImg {
+    width: 150px;
+}
+
+.userImg img {
+    width: 100%;
+    border: 5px solid #000000;
+    border-radius: 300px;
+}
 /* -----====[ /CABEÇALHO ]====----- */
 
 
@@ -158,7 +168,7 @@ header {
 }
 
 .form-submit {
-    margin-top: 30px;
+    margin: 30px 5px;
 }
 
 .error-message {
@@ -183,6 +193,14 @@ header {
 
 .success-message p {
     margin: 0;
+}
+
+.header-table {
+    background-color: #009fd9;
+}
+
+.table, .table tbody {
+    text-align: center;
 }
 
 /* -----====[ /CONTEÚDO ]====----- */

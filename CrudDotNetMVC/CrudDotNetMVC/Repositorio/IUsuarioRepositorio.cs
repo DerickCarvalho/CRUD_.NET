@@ -8,5 +8,6 @@ namespace CrudDotNetMVC.Repositorio
         UsuariosModel Login(string usuario, string senha);
         UsuariosModel ValidarUsuario(string usuario);
         UsuariosModel BuscarUsuario(int id);
+        UsuariosModel AtualizarUsuario(UsuariosModel attUsuario);
     }
 }

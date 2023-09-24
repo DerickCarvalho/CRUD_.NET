@@ -14,6 +14,7 @@ namespace CrudDotNetMVC
             var connectionString = builder.Configuration.GetConnectionString("DataBase");
             builder.Services.AddDbContext<BancoContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            builder.Services.AddScoped<ITaskRepositorio, TaskRepositorio>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

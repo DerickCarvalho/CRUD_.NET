@@ -1,20 +1,57 @@
-﻿@{
+﻿@model List<TasksModel>
+@{
     int usuId = 0;
     if (ViewData["Id"] != null)
     {
         int.TryParse(ViewData["Id"].ToString(), out usuId);
     }
-
-    string urlImage;
-    if (ViewData["UrlImg"] != null)
-    {
-        urlImage = ViewData["UrlImg"].ToString();
-    }
 }
 
 <header class="flex-row-space-between space">
-    <a class="logo"><img src="~/imgs/logo.png" alt="Imagem da logo do site" /></a>
-    <a role="button" asp-controller="Home" asp-action="Perfil" class="flex-row-center profile"><p>@ViewData["Usuario"]</p><img src="@ViewData["UrlImg"]" /></a>
+    <a class="logo">
+        <img src="~/imgs/logo.png" alt="Imagem da logo do site" />
+    </a>
+    <a role="button" asp-controller="Home" asp-action="Perfil" asp-route-id="@usuId" class="flex-row-center profile">
+        <p>@ViewData["Usuario"]</p><img src="@ViewData["UrlImg"]" />
+    </a>
 </header>
 
-<h1>TELA DE USUARIO @usuId</h1>
+<div class="flex-column-center">
+
+    <div style="padding-bottom: 50px;" class="flex-row-space-around width-50">
+        <h1>Lista de Tarefas</h1>
+        <a role="button" class="btn btn-primary" asp-route-id="@ViewData["Id"]" asp-controller="Home" asp-action="AdicionarTask">Adicionar Tarefa</a>
+    </div>
+
+    <table class="table table-striped width-50">
+        <thead class="header-table">
+            <tr>
+                <th scope="col">Título</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @if (Model != null && Model.Any())
+            {
+                foreach (TasksModel tarefas in Model)
+                {
+                    <tr>
+                        <td>@tarefas.Titulo</td>
+                        <td>@tarefas.Descricao</td>
+                        <td>
+                            <div class="btn-group">
+                                @if (tarefas.Status != 1)
+                                {
+                                    <a role="button" class="btn btn-primary" asp-route-id="@tarefas.Id" asp-controller="Home" asp-action="Concluir">Concluir</a>
+                                }
+                                <a role="button" class="btn btn-danger" asp-route-id="@tarefas.Id" asp-controller="Home" asp-action="Excluir">Excluir</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
