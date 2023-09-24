@@ -92,9 +92,37 @@ header {
 }
 
 .logo img:hover {
+    cursor: pointer;
     transform: scale(1.05);
 }
+.profile {
+    text-decoration: none;
+    transition: linear transform 0.1s;
+}
+.profile:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.profile p {    
+    color: #000000;
+    font-size: 20px;
+    margin: 0 10px;
+}
+.profile img {
+    width: 65px;
+    border: 5px solid #000000;
+    border-radius: 200px;
+}
 
+.userImg {
+    width: 150px;
+}
+
+.userImg img {
+    width: 100%;
+    border: 5px solid #000000;
+    border-radius: 300px;
+}
 /* -----====[ /CABEÇALHO ]====----- */
 
 
@@ -140,7 +168,7 @@ header {
 }
 
 .form-submit {
-    margin-top: 30px;
+    margin: 30px 5px;
 }
 
 .error-message {
@@ -153,6 +181,26 @@ header {
 
 .error-message p {
     margin: 0;
+}
+
+.success-message {
+    background-color: #7cff75;
+    margin: 10px 0;
+    padding: 10px;
+    border: 5px solid #078200;
+    border-radius: 10px;
+}
+
+.success-message p {
+    margin: 0;
+}
+
+.header-table {
+    background-color: #009fd9;
+}
+
+.table, .table tbody {
+    text-align: center;
 }
 
 /* -----====[ /CONTEÚDO ]====----- */

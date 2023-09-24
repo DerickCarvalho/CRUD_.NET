@@ -1,0 +1,39 @@
+﻿@model UsuariosModel
+
+<header class="flex-row-space-between space">
+    <a class="logo">
+        <img role="button" id="backPage" src="~/imgs/logo.png" alt="Imagem da logo do site" />
+    </a>
+</header>
+
+<div class="flex-column-center">
+    <div class="userImg">
+        <img src="@ViewData["UrlImg"]"/>
+    </div>
+
+    <form class="flex-column-center width-100" asp-controller="Home" asp-action="AtualizarUsuario">
+        <div class="inputs width-50 flex-column-left">
+            <label>Usuario</label>
+            <input class="form-input" asp-for="Usuario" type="Text" placeholder="Usuario" />        
+        </div>
+
+        <div class="inputs width-50 flex-column-left">
+            <label>Foto</label>
+            <input class="form-input" asp-for="UrlImg" type="Text" placeholder="URL da Imagem de perfil" />
+            <input asp-for="Id" type="hidden" value="@ViewData["Id"]" />
+        </div>
+
+        <div class="flex-row-space-around">
+            <button class="form-submit btn btn-primary">Atualizar</button>
+            <a class="form-submit btn btn-danger" asp-controller="Home" asp-action="Index">Deslogar</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    var backPage = document.getElementById('backPage');
+
+    backPage.addEventListener('click', () => {
+        window.history.back();
+    });
+</script>

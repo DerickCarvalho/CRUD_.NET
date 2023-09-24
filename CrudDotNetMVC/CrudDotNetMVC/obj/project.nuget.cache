@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1tjOcEh+G0wvbYxP+hzn5NXtPZ1ig7HZUyQsPUDd/gP/vt9saBpgDdA9h2rzbz4Ie8HpkEGvk5eNdecJPOrSfw==",
+  "dgSpecHash": "eCEVxzpcsHVWudVSZiJT2hnMOBbFKluziOiCayJVmoKFOgkrdjKAzWR1qzpxZMoS6NVb3+wPVMXsH9/4hUsatg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj",
+  "projectFilePath": "c:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC Gamer Derick\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\PC Gamer Derick\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
