@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\confirm-icon.png",
+      "PackagePath": "staticwebassets\\imgs\\confirm-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\confirm.png",
+      "PackagePath": "staticwebassets\\imgs\\confirm.png"
+    },
+    {
       "Id": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\eye.png",
       "PackagePath": "staticwebassets\\imgs\\eye.png"
     },
@@ -27,6 +35,10 @@
     {
       "Id": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\logo.png",
       "PackagePath": "staticwebassets\\imgs\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\no-confirm.png",
+      "PackagePath": "staticwebassets\\imgs\\no-confirm.png"
     },
     {
       "Id": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\profile.png",

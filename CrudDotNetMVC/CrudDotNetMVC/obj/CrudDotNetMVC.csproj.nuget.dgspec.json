@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj": {}
+    "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj": {}
   },
   "projects": {
-    "c:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj": {
+    "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj",
+        "projectUniqueName": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj",
         "projectName": "CrudDotNetMVC",
-        "projectPath": "c:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj",
+        "projectPath": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\CrudDotNetMVC.csproj",
         "packagesPath": "C:\\Users\\PC Gamer Derick\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\obj\\",
+        "outputPath": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC Gamer Derick\\AppData\\Roaming\\NuGet\\NuGet.Config",

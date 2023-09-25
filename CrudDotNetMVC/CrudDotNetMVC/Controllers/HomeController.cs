@@ -47,6 +47,61 @@ namespace CrudDotNetMVC.Controllers
             ViewData["UrlImg"] = usuInfo.UrlImg;
             return View();
         }
+
+        public IActionResult EditarTask(int id)
+        {
+            if (id == 0 && TempData["UsuId"] != null) 
+            {
+                int usuId = 0;
+                int.TryParse(TempData["UsuId"].ToString(), out usuId);
+
+                int taskId = 0;
+                int.TryParse(TempData["TaskId"].ToString(), out taskId);
+
+                TasksModel task = _taskRepositorio.PegarTarefa(taskId);
+
+                UsuariosModel usuarioInfo = _usuarioRepositorio.BuscarUsuario(usuId);
+                ViewData["Id"] = usuarioInfo.Id;
+                ViewData["Usuario"] = usuarioInfo.Usuario;
+                ViewData["Nome"] = usuarioInfo.Nome;
+                ViewData["UrlImg"] = usuarioInfo.UrlImg;
+                TempData["ErroEdit"] = "Erro ao atualizar tarefa!";
+                return View(task);
+            }
+            else
+            {
+                TasksModel tarefa = _taskRepositorio.PegarTarefa(id);
+
+                UsuariosModel usuInfo = _usuarioRepositorio.BuscarUsuario(tarefa.UsuId);
+
+                ViewData["Id"] = usuInfo.Id;
+                ViewData["Usuario"] = usuInfo.Usuario;
+                ViewData["Nome"] = usuInfo.Nome;
+                ViewData["UrlImg"] = usuInfo.UrlImg;
+                return View(tarefa);
+            }
+        }
+
+        public IActionResult AtualizarTask(TasksModel attTask) 
+        { 
+            TasksModel atualizar = _taskRepositorio.Editar(attTask);
+
+            if (attTask != null) 
+            {
+                UsuariosModel usuInfo = _usuarioRepositorio.BuscarUsuario(attTask.UsuId);
+
+                TempData["UsuId"] = usuInfo.Id;
+                return RedirectToAction("TasksList");
+            } else
+            {
+                UsuariosModel usuInfo = _usuarioRepositorio.BuscarUsuario(attTask.UsuId);
+
+                TempData["UsuId"] = usuInfo.Id;
+                TempData["TaskId"] = attTask.Id;
+                return RedirectToAction("EditarTask");
+            }
+        }
+
         public IActionResult TasksList()
         {
             if (TempData["UsuId"] != null)

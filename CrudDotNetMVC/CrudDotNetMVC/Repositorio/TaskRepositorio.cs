@@ -60,5 +60,32 @@ namespace CrudDotNetMVC.Repositorio
                 throw new Exception("Problema ao marcar tarefa como concluída!");
             }
         }
+
+        public TasksModel Editar(TasksModel task)
+        {
+            TasksModel oldInfos = PegarTarefa(task.Id);
+
+            if (oldInfos != null)
+            {
+                if(task.Titulo != null)
+                {
+                    oldInfos.Titulo = task.Titulo;
+                }
+
+                if (task.Descricao != null)
+                {
+                    oldInfos.Descricao = task.Descricao;
+                }
+
+                _bancoContext.Update(oldInfos);
+                _bancoContext.SaveChanges();
+
+                return task;
+            }
+            else
+            {
+                throw new Exception("Erro ao atualizar tarefa");
+            }
+        }
     }
 }

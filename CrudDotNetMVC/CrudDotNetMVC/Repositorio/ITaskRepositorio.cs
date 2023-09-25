@@ -9,5 +9,6 @@ namespace CrudDotNetMVC.Repositorio
         TasksModel PegarTarefa(int id);
         TasksModel Concluida(int taskId);
         TasksModel Excluir(int id);
+        TasksModel Editar(TasksModel task);
     }
 }

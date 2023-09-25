@@ -203,10 +203,15 @@ header {
     text-align: center;
 }
 
+.stts-img {
+    width: 100px;
+}
+
+.stts-img img {
+    width: 50%;
+}
 /* -----====[ /CONTEÚDO ]====----- */
-
 /* -----====[ RODAPÉ ]====----- */
-
 footer {
     background-color: #009fd9;
 }

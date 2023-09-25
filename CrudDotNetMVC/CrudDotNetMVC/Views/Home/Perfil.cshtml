@@ -14,12 +14,12 @@
     <form class="flex-column-center width-100" asp-controller="Home" asp-action="AtualizarUsuario">
         <div class="inputs width-50 flex-column-left">
             <label>Usuario</label>
-            <input class="form-input" asp-for="Usuario" type="Text" placeholder="Usuario" />        
+            <input class="form-input" asp-for="Usuario" type="Text" placeholder="Usuario" autocomplete="off" />
         </div>
 
         <div class="inputs width-50 flex-column-left">
             <label>Foto</label>
-            <input class="form-input" asp-for="UrlImg" type="Text" placeholder="URL da Imagem de perfil" />
+            <input class="form-input" asp-for="UrlImg" type="Text" placeholder="URL da Imagem de perfil" autocomplete="off" />
             <input asp-for="Id" type="hidden" value="@ViewData["Id"]" />
         </div>
 

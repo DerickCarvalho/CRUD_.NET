@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8aGlUqRBanJMhESrv7Zbxsz/kGW9LnpZLCSm1X4p2F4=",
+  "Hash": "bUj7F+0RvVmZ4LNYbrKvm3zFo6o8nKC0mQN52JlCEVo=",
   "Source": "CrudDotNetMVC",
   "BasePath": "_content/CrudDotNetMVC",
   "Mode": "Default",
@@ -85,6 +85,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\confirm.png",
+      "SourceId": "CrudDotNetMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\",
+      "BasePath": "_content/CrudDotNetMVC",
+      "RelativePath": "imgs/confirm.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\confirm.png"
+    },
+    {
+      "Identity": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\confirm-icon.png",
+      "SourceId": "CrudDotNetMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\",
+      "BasePath": "_content/CrudDotNetMVC",
+      "RelativePath": "imgs/confirm-icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\confirm-icon.png"
+    },
+    {
       "Identity": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\eye.png",
       "SourceId": "CrudDotNetMVC",
       "SourceType": "Discovered",
@@ -151,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\no-confirm.png",
+      "SourceId": "CrudDotNetMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\",
+      "BasePath": "_content/CrudDotNetMVC",
+      "RelativePath": "imgs/no-confirm.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\no-confirm.png"
     },
     {
       "Identity": "C:\\Users\\PC Gamer Derick\\Desktop\\Projetos GIT\\CRUD_.NET\\CrudDotNetMVC\\CrudDotNetMVC\\wwwroot\\imgs\\profile.png",
