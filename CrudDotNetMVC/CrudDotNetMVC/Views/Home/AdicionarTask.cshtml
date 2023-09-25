@@ -24,13 +24,13 @@
     <form class="flex-column-center width-100" asp-controller="Home" asp-action="NovaTask">
         <div class="inputs width-50 flex-column-left">
             <label>Título</label>
-            <input class="form-input" asp-for="Titulo" type="Text" placeholder="Título" maxlength="30" required/>
+            <input class="form-input" asp-for="Titulo" type="Text" placeholder="Título" maxlength="30" required autocomplete="off" />
             <input asp-for="Status" type="hidden" value="0" />
         </div>
 
         <div class="inputs width-50 flex-column-left">
             <label>Descrição</label>
-            <textarea class="form-input" asp-for="Descricao" placeholder="Descrição da tarefa" maxlength="300" required></textarea>
+            <textarea class="form-input" asp-for="Descricao" placeholder="Descrição da tarefa" maxlength="300" required autocomplete="off"></textarea>
             <input asp-for="UsuId" type="hidden" value="@ViewData["Id"]" />
         </div>
 
